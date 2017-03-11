@@ -243,7 +243,7 @@ GAME
 		name = ScenarioNewGameIntro
 		scene = 5, 6, 8
 		kscComplete = True
-		editorComplete = False
+		editorComplete = True
 		tsComplete = False
 	}
 	SCENARIO
@@ -258,7 +258,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 0
+		sci = 137
 		Tech
 		{
 			id = start
@@ -272,6 +272,223 @@ GAME
 			part = GooExperiment
 			part = trussPiece1x
 			part = parachuteSingle
+		}
+		Tech
+		{
+			id = basicRocketry
+			state = Available
+			cost = 5
+			part = US.1M110.Wedge.ScienceBay
+			part = US.f.Dec.SafetyDecoupler125
+			part = US.1C10.Wedge.Quadcore
+			part = fuelTankSmallFlat
+			part = solidBooster
+			part = liquidEngine2
+		}
+		Tech
+		{
+			id = generalRocketry
+			state = Available
+			cost = 20
+			part = fuelTankSmall
+			part = solidBooster1-1
+			part = liquidEngine
+		}
+		Tech
+		{
+			id = advRocketry
+			state = Available
+			cost = 45
+			part = fuelTank
+			part = radialLiquidEngine1-2
+			part = liquidEngine3
+		}
+		Tech
+		{
+			id = fuelSystems
+			state = Available
+			cost = 90
+			part = KSPIE.Hex.Sabatier
+			part = LH.IcarusTruss8
+			part = LH.IcarusTruss5
+			part = LH.IcarusTruss3
+			part = LH.IcarusTruss21
+			part = LH.IcarusTruss2
+			part = LH.IcarusTruss13
+			part = LH.IcarusTruss
+			part = KspieNode
+			part = kspieHeatshield
+			part = KspiWrapperTank48
+			part = KspiWrapperTank24
+			part = KspiWrapperTank96
+			part = KspiWrapperCap
+			part = US.1R220.Wedge.Monoprop
+			part = US.1R210.Wedge.Liquidfuel
+			part = fuelTank4-2
+			part = fuelTank1-2
+			part = fuelTank2-2
+			part = fuelTank.long
+			part = fuelLine
+			part = KKAOSS.Fuel.Tank.small
+			part = KKAOSS.Fuel.Tank
+			part = IfsWrapperTank24
+			part = IfsWrapperTank48
+			part = IfsWrapperTank96
+			part = IfsWrapperCap
+		}
+		Tech
+		{
+			id = generalConstruction
+			state = Available
+			cost = 45
+			part = US.1R110.Wedge.KISContainer
+			part = US.1C15.Wedge.Hexacore
+			part = launchClamp1
+			part = largeAdapter
+			part = decoupler1-2
+			part = Mk1FuselageStructural
+			part = strutConnector
+			part = MK1CrewCabin
+			part = M2X.StructuralTube
+			part = KIS.ContainerMount1
+			part = KIS.Container1
+		}
+		Tech
+		{
+			id = engineering101
+			state = Available
+			cost = 5
+			part = SurfAntenna
+			part = stackDecoupler
+			part = longAntenna
+			part = sensorThermometer
+			part = KIS.wrench
+			part = KIS.guide
+		}
+		Tech
+		{
+			id = advConstruction
+			state = Available
+			cost = 90
+			part = US.e.Dec.SafetyDecoupler250
+			part = US.1C20.Wedge.Octocore
+			part = stackTriCoupler
+			part = largeAdapter2
+			part = radialDecoupler2
+			part = radialDecoupler1-2
+			part = rocketNoseCone
+			part = fairingSize1
+			part = pointyNoseConeA
+			part = KKAOSS.Storage.End.Cap.Storage
+			part = KKAOSS.airlock.mid.g
+			part = KKAOSS.airlock.end.g
+			part = adapter-25-125
+			part = M2X.Endcap
+			part = kis.concreteBase1
+			part = asphaltSide
+			part = asphaltRamp
+			part = asphaltCorner
+			part = KAS.Winch1
+		}
+		Tech
+		{
+			id = actuators
+			state = Available
+			cost = 160
+			part = GrapplingDevice
+			part = M2X.HeavyVTOL
+			part = M2X.Siddeley
+			part = M2X.Jumpjet
+		}
+		Tech
+		{
+			id = stability
+			state = Available
+			cost = 18
+			part = radialDecoupler
+			part = winglet
+			part = noseCone
+		}
+		Tech
+		{
+			id = aviation
+			state = Available
+			cost = 45
+			part = GearFree
+			part = GearFixed
+			part = MK1Fuselage
+			part = miniFuselage
+			part = miniJetEngine
+			part = Mark1Cockpit
+			part = structuralWing3
+			part = StandardCtrlSrf
+			part = wingConnector5
+			part = wingConnector2
+			part = miniIntake
+			part = airplaneTail
+			part = tailfin
+			part = sweptWing
+			part = M3X.Heavyprop
+		}
+		Tech
+		{
+			id = landing
+			state = Available
+			cost = 90
+			part = SmallGearBay
+			part = parachuteLarge
+			part = LaunchEscapeSystem
+			part = landingLeg1
+			part = HeatShield2
+		}
+		Tech
+		{
+			id = aerodynamicSystems
+			state = Available
+			cost = 90
+			part = nacelleBody
+			part = JetEngine
+			part = Mark2Cockpit
+			part = sweptWing2
+			part = structuralWing2
+			part = wingConnector3
+			part = wingConnector
+			part = airplaneTailB
+			part = standardNoseCone
+			part = noseConeAdapter
+			part = CircularIntake
+			part = airScoop
+			part = engine-pod-2
+			part = engine-pod-1
+		}
+		Tech
+		{
+			id = advAerodynamics
+			state = Available
+			cost = 160
+			part = smallHardpoint
+			part = sweptWing1
+			part = structuralWing4
+			part = elevon5
+			part = smallCtrlSrf
+			part = elevon3
+			part = elevon2
+			part = delta.small
+			part = deltaWing
+			part = wingConnector4
+			part = CanardController
+			part = airbrake1
+			part = M3X.OMSShoulder
+			part = M3X.serviceBay
+			part = M2X.Servicebay
+			part = M2X.625tricoupler
+			part = M2X.SpadeTail
+			part = M2X.Short25adapter
+			part = M2X.linearTricoupler
+			part = M2X.Shortbicoupler
+			part = M2X.FuselageRVTOLE
+			part = M2X.DropshipCockpit
+			part = M2X.Tailboom
 		}
 	}
 	SCENARIO
@@ -449,6 +666,46 @@ GAME
 		{
 			intact = True
 		}
+		SpaceCenter/Administration/Facility/Building
+		{
+			intact = True
+		}
+		SpaceCenter/AstronautComplex/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/Flag
+		{
+			intact = True
+		}
+		SpaceCenter/MissionControl/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/ForeverAlone
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/Building
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/building
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/OuterDish
+		{
+			intact = True
+		}
+		SpaceCenter/VehicleAssemblyBuilding/Facility/VAB2
+		{
+			intact = True
+		}
 	}
 	SCENARIO
 	{
@@ -501,7 +758,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.2.2
-		UT = 23.119999999999596
+		UT = 75.580000000002102
 		activeVessel = 0
 		mapViewFiltering = 0
 		commNetUIModeTracking = Network
@@ -632,7 +889,7 @@ GAME
 		_BuildManager v1.5.6131.22338 / v1.0.0.0 = True
 		Firespitter v7.3.6212.36331 = True
 		HideEmptyTechTreeNodes v0.7.4.0 = True
-		InterstellarFuelSwitch v2.4.3.0 / v2.4.3 = True
+		InterstellarFuelSwitch v2.4.3.0 / v2.4.3 = False
 		MiniAVC v1.0.3.2 = True
 		Scale_Redist v1.0.0.0 = True
 		RasterPropMonitor v0.28.0.18220 = True
@@ -653,7 +910,7 @@ GAME
 		KSP-AVC v1.1.6.2 = True
 		AnimatedIntakes v1.0.0.0 = True
 		TweakableAnimator v1.0.0.0 = True
-		PlanetarySurfaceStructures v1.4.0.0 = True
+		PlanetarySurfaceStructures v1.4.0.0 = False
 		PlanetShine v1.0.6121.34655 = True
 		PreciseManeuver v2.0.0.0 / v / v2.0 = True
 		PreciseManeuver.Unity v1.0.0.0 = True
@@ -663,8 +920,8 @@ GAME
 		Scale v2.3.4.0 = True
 		Assembly-CSharp-firstpass v0.0.0.0 = True
 		OpenResourceSystem_KSPIE v1.5.0.0 = True
-		Interstellar v1.12.8.0 = True
-		KSPAssets v1.0.0.0 = True
+		Interstellar v1.12.8.0 = False
+		KSPAssets v1.0.0.0 = False
 		WaypointManager v1.0.0.0 / v2.6.2 = True
 		000_FilterExtensions = True
 		000_FilterExtensions Configs = True
@@ -716,6 +973,15 @@ GAME
 		ModuleManager.ConfigSHA = True
 		ModuleManager.Physics = True
 		ModuleManager.TechTree = True
+		InterstellarFuelSwitch v2.4.4.0 / v2.4.4 = True
+		PlanetarySurfaceStructures v1.4.1.0 = True
+		VesselView v0.8.4.0 / v1.0.0.0 = True
+		VesselViewRPM v0.8.4.0 / v1.0.0.0 = True
+		VVDiscoDisplay v0.8.4.0 / v1.0.0.0 = True
+		VVPartSelector v0.8.4.0 / v1.0.0.0 = True
+		Interstellar v1.12.11.0 = True
+		MK1CabinHatch = True
+		VesselView = True
 	}
 	ROSTER
 	{
