@@ -11,7 +11,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/NASA
-	launchID = 1
+	launchID = 3
 	modded = True
 	envInfo =  - Environment Info - Win32NT 7FFFFFFFFFFFFFFF  Args: KSP_x64.exe -single-instance - 
 	versionFull = 1.2.2.1622 (WindowsPlayer x64)
@@ -252,13 +252,117 @@ GAME
 		scene = 7, 8, 5
 		Progress
 		{
+			FirstLaunch
+			{
+				completedManned = 136.73999999999614
+			}
+			FirstCrewToSurvive
+			{
+				completed = 17191.552129512642
+				crew
+				{
+					crews = Jebediah Kerman
+				}
+			}
+			RecordsAltitude
+			{
+				completed = 329.93999999998988
+				record = 70000
+			}
+			RecordsDepth
+			{
+				reached = 4570.8729968299413
+				record = 0.49867925071157515
+			}
+			RecordsSpeed
+			{
+				reached = 3939.9982202146607
+				record = 2288.016101979807
+			}
+			RecordsDistance
+			{
+				completed = 320.63999999999834
+				record = 100000
+			}
+			ReachedSpace
+			{
+				completedManned = 329.93999999998988
+				vessel
+				{
+					name = Orbiter 1
+					flag = Squad/Flags/NASA
+				}
+				crew
+				{
+					crews = Jebediah Kerman
+				}
+			}
+			Kerbin
+			{
+				reached = 395.15999999993056
+				Orbit
+				{
+					completedManned = 395.15999999993056
+					vessel
+					{
+						name = Orbiter 1
+						flag = Squad/Flags/NASA
+					}
+					crew
+					{
+						crews = Jebediah Kerman
+					}
+				}
+				Landing
+				{
+					completedManned = 16724.63212950245
+					vessel
+					{
+						name = Jebediah Kerman
+						flag = Squad/Flags/NASA
+					}
+					crew
+					{
+						crews = Jebediah Kerman
+					}
+				}
+				Splashdown
+				{
+					completedManned = 4570.3529968299299
+				}
+				SurfaceEVA
+				{
+					completed = 16711.972129502174
+					crew
+					{
+						crews = Jebediah Kerman
+					}
+				}
+				CelestialBodyTransfer
+				{
+					completed = 16847.252129505127
+				}
+				ReturnFromOrbit
+				{
+					completedManned = 4570.3529968299299
+					vessel
+					{
+						name = Orbiter 1
+						flag = Squad/Flags/NASA
+					}
+					crew
+					{
+						crews = Jebediah Kerman
+					}
+				}
+			}
 		}
 	}
 	SCENARIO
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 137
+		sci = 152.972214
 		Tech
 		{
 			id = start
@@ -489,6 +593,26 @@ GAME
 			part = M2X.FuselageRVTOLE
 			part = M2X.DropshipCockpit
 			part = M2X.Tailboom
+		}
+		Science
+		{
+			id = recovery@KerbinFlew
+			title = Recovery of a vessel that survived a flight.
+			dsc = 1
+			scv = 0.00462961197
+			sbv = 5
+			sci = 5.97222233
+			cap = 6
+		}
+		Science
+		{
+			id = recovery@KerbinOrbited
+			title = Recovery of a vessel returned from Kerbin orbit
+			dsc = 1
+			scv = 0.166666672
+			sbv = 10
+			sci = 10
+			cap = 12
 		}
 	}
 	SCENARIO
@@ -758,9 +882,9 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.2.2
-		UT = 75.580000000002102
+		UT = 17205.992129512957
 		activeVessel = 0
-		mapViewFiltering = 0
+		mapViewFiltering = -1026
 		commNetUIModeTracking = Network
 		commNetUIModeFlight = Path
 		VESSEL
@@ -840,6 +964,600 @@ GAME
 				state = 1
 				lastObservedTime = 0.02
 				lifetime = 586354.71038818359
+				refTime = 1728000
+				size = 4
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				ModularFlightIntegrator
+				{
+				}
+				kOSVesselModule
+				{
+				}
+				RPMVesselComputer
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = 9ae6b01593584f159f6d48db24dcaa14
+			name = Ast. FQT-931
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 94.559999999998325
+			lct = 94.559999999998325
+			lastUT = -1
+			root = 0
+			lat = 0.31573759120482053
+			lon = 178.50631158360173
+			alt = 13696643119.3218
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.635266542,0.337201595,-0.217676803,0.659809291
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14156273054.787691
+				ECC = 0.044561476668511395
+				INC = 0.32484895290648413
+				LPE = 150.54414885872518
+				LAN = 102.18744357019216
+				MNA = 0.47045844404077714
+				EPH = 2612918.3759179688
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 917709473
+				mid = 917709473
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 94.559999999998325
+				lifetime = 311902.65197753906
+				refTime = 1728000
+				size = 0
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				ModularFlightIntegrator
+				{
+				}
+				kOSVesselModule
+				{
+				}
+				RPMVesselComputer
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = 4e2f6869de88432f934745592dc575b7
+			name = Ast. TIB-097
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 124.57999999999235
+			lct = 124.57999999999235
+			lastUT = -1
+			root = 0
+			lat = -1.4632375286288206
+			lon = 177.69918234913001
+			alt = 13493235135.462967
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.531567097,0.132207856,-0.588959396,0.594209015
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14261620297.532124
+				ECC = 0.053800939528731995
+				INC = 1.4697805845574161
+				LPE = 326.42838494304016
+				LAN = 262.39349254784827
+				MNA = 0.50291463508563616
+				EPH = 2063654.6215039063
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 214875677
+				mid = 214875677
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 124.57999999999235
+				lifetime = 1026992.1478271484
+				refTime = 1728000
+				size = 3
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				ModularFlightIntegrator
+				{
+				}
+				kOSVesselModule
+				{
+				}
+				RPMVesselComputer
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = 6f5a82da74e44cae97cb4ff60273ce4d
+			name = Ast. BRZ-350
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 289.72000000002646
+			lct = 289.72000000002646
+			lastUT = -1
+			root = 0
+			lat = 0.22863143007749345
+			lon = -174.82247939905514
+			alt = 14742746056.433859
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.644063771,0.119659133,0.559868634,0.507356644
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14558367201.603813
+				ECC = 0.071556439800009614
+				INC = 0.35063826178008911
+				LPE = 159.69621032981405
+				LAN = 144.7234501560086
+				MNA = -0.4396529960731998
+				EPH = 2448204.9055468752
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 812260303
+				mid = 812260303
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 289.72000000002646
+				lifetime = 1437790.5395507813
+				refTime = 1728000
+				size = 3
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				ModularFlightIntegrator
+				{
+				}
+				kOSVesselModule
+				{
+				}
+				RPMVesselComputer
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = 896c46f8224145a18c4431d6fdc614b9
+			name = Ast. GCU-523
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 319.73999999999916
+			lct = 319.73999999999916
+			lastUT = -1
+			root = 0
+			lat = 0.022177874705334239
+			lon = -175.02049413628166
+			alt = 14316546142.633224
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.873700798,0.272160977,-0.403089017,0.00972828362
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14129395695.34943
+				ECC = 0.039695906872164122
+				INC = 0.21849558581691769
+				LPE = 318.65592643297441
+				LAN = 11.071632479803611
+				MNA = 0.3580711157780137
+				EPH = 4393997.901621094
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 62769701
+				mid = 62769701
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 319.73999999999916
+				lifetime = 940516.17736816406
+				refTime = 1728000
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				ModularFlightIntegrator
+				{
+				}
+				kOSVesselModule
+				{
+				}
+				RPMVesselComputer
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = aa9478cd4652497a9a2a90cce4052173
+			name = Ast. QGV-354
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 1161.4777050780403
+			lct = 1161.4777050780403
+			lastUT = -1
+			root = 0
+			lat = 0.94853967111129722
+			lon = -174.18930917264404
+			alt = 15383770652.808979
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.285289943,-0.0794897527,-0.51067692,0.807155609
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 15204153818.517319
+				ECC = 0.10367627692536935
+				INC = 1.0048472980450427
+				LPE = 182.61536343259027
+				LAN = 116.05213494901199
+				MNA = 0.028698519175959503
+				EPH = 3089532.3517285157
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 1851994899
+				mid = 1851994899
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 1161.4777050780403
+				lifetime = 1366763.6810302734
+				refTime = 1728000
+				size = 1
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				ModularFlightIntegrator
+				{
+				}
+				kOSVesselModule
+				{
+				}
+				RPMVesselComputer
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = 3011a4773cb549138bfff80e536ebfac
+			name = Ast. FWD-250
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 1284.4777050780403
+			lct = 1284.4777050780403
+			lastUT = -1
+			root = 0
+			lat = 1.0262378381930313
+			lon = 177.18954310781413
+			alt = 13757902246.518974
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.510968268,0.433308303,0.139212906,0.729229093
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14609587055.297417
+				ECC = 0.072731317761628986
+				INC = 1.1155207508917786
+				LPE = 172.88486952057468
+				LAN = 65.178006356650599
+				MNA = 0.24934379943058982
+				EPH = 1910905.620283203
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 1543236834
+				mid = 1543236834
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 1284.4777050780403
+				lifetime = 486079.30755615234
 				refTime = 1728000
 				size = 4
 			}
@@ -1006,11 +1724,18 @@ GAME
 			extraXP = 0
 			CAREER_LOG
 			{
-				flight = 0
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Suborbit,Kerbin
+				0 = Orbit,Kerbin
+				0 = Land,Kerbin
+				0 = ExitVessel,Kerbin
+				0 = BoardVessel,Kerbin
+				0 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 0
+				flight = 1
 			}
 		}
 		KERBAL
@@ -1086,6 +1811,206 @@ GAME
 			gExperienced = 0
 			outDueToG = False
 			ToD = 0
+			idx = -1
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Elgar Kerman
+			gender = Male
+			type = Applicant
+			trait = Engineer
+			brave = 0.19963035
+			dumb = 0.675263166
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 166141.12101743519
+			idx = -1
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Julbeth Kerman
+			gender = Female
+			type = Applicant
+			trait = Scientist
+			brave = 0.23073709
+			dumb = 0.70096612
+			badS = True
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 261487.26054380237
+			idx = -1
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Kaisa Kerman
+			gender = Female
+			type = Applicant
+			trait = Engineer
+			brave = 0.801296115
+			dumb = 0.721411467
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 148312.85449216663
+			idx = -1
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Samtrid Kerman
+			gender = Female
+			type = Applicant
+			trait = Engineer
+			brave = 0.0559822209
+			dumb = 0.123910174
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 238555.71757505237
+			idx = -1
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Richdan Kerman
+			gender = Male
+			type = Applicant
+			trait = Engineer
+			brave = 0.525372267
+			dumb = 0.972605228
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 204077.32402036487
+			idx = -1
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Fermin Kerman
+			gender = Male
+			type = Crew
+			trait = Pilot
+			brave = 0.0695624873
+			dumb = 0.400715023
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 203536.79667661487
+			idx = -1
+			extraXP = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Land,Kerbin
+				0 = Flight,Kerbin
+				0 = ExitVessel,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
+		}
+		KERBAL
+		{
+			name = Verya Kerman
+			gender = Female
+			type = Applicant
+			trait = Engineer
+			brave = 0.354441673
+			dumb = 0.625196815
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 268141.32929990592
 			idx = -1
 			extraXP = 0
 			CAREER_LOG
