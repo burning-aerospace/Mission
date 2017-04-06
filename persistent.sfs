@@ -11,7 +11,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/NASA
-	launchID = 5
+	launchID = 7
 	modded = True
 	envInfo =  - Environment Info - Win32NT 7FFFFFFFFFFFFFFF  Args: KSP_x64.exe -single-instance - 
 	versionFull = 1.2.2.1622 (WindowsPlayer x64)
@@ -218,14 +218,6 @@ GAME
 	}
 	SCENARIO
 	{
-		name = ScenarioNewGameIntro
-		scene = 5, 6, 8
-		kscComplete = True
-		editorComplete = True
-		tsComplete = False
-	}
-	SCENARIO
-	{
 		name = ProgressTracking
 		scene = 7, 8, 5
 		Progress
@@ -249,8 +241,8 @@ GAME
 			}
 			RecordsDepth
 			{
-				reached = 4570.8729968299413
-				record = 0.49867925071157515
+				reached = 732585.94826542656
+				record = 0.63205228361766785
 			}
 			RecordsSpeed
 			{
@@ -311,6 +303,23 @@ GAME
 				Splashdown
 				{
 					completedManned = 4570.3529968299299
+				}
+				Science
+				{
+					completedUnmanned = 733329.06626904558
+					vessel
+					{
+						name = Orbiter 2
+						flag = Squad/Flags/NASA
+					}
+				}
+				Spacewalk
+				{
+					completed = 727320.29882322287
+					crew
+					{
+						crews = Valentina Kerman
+					}
 				}
 				SurfaceEVA
 				{
@@ -396,7 +405,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 843.402222
+		sci = 749.592041
 		Tech
 		{
 			id = start
@@ -537,6 +546,11 @@ GAME
 			part = M2X.HeavyVTOL
 			part = M2X.Siddeley
 			part = M2X.Jumpjet
+			part = AdjustableRailScaleable
+			part = IRHingeTallScaleable
+			part = IRHingeTallNDScaleable
+			part = IRPistonScaleable
+			part = IR.RotatronScaleable
 		}
 		Tech
 		{
@@ -727,14 +741,36 @@ GAME
 			part = winglet3
 			part = R8winglet
 		}
+		Tech
+		{
+			id = specializedConstruction
+			state = Available
+			cost = 160
+			part = crewtube-125-25-2
+			part = crewtube-125-25-1
+			part = crewtube-airlock-125
+			part = crewtube-125-2
+			part = crewtube-125-1
+			part = stackBiCoupler
+			part = stackPoint1
+			part = dockingPort2
+			part = stackSeparator
+			part = trussAdapter
+			part = fairingSize2
+			part = pointyNoseConeB
+			part = KKAOSS.KIS.ground.plate
+			part = KIS.Container3
+			part = KAS.Strut1
+			part = KAS.Pylon1
+		}
 		Science
 		{
 			id = recovery@KerbinFlew
 			title = Recovery of a vessel that survived a flight.
 			dsc = 1
-			scv = 0.00462961197
+			scv = 0.000771601975
 			sbv = 5
-			sci = 5.97222233
+			sci = 5.99537039
 			cap = 6
 		}
 		Science
@@ -742,9 +778,9 @@ GAME
 			id = recovery@KerbinOrbited
 			title = Recovery of a vessel returned from Kerbin orbit
 			dsc = 1
-			scv = 0.166666672
+			scv = 0.0277777519
 			sbv = 10
-			sci = 10
+			sci = 11.666667
 			cap = 12
 		}
 		Science
@@ -786,6 +822,66 @@ GAME
 			sbv = 5
 			sci = 16.3500004
 			cap = 65
+		}
+		Science
+		{
+			id = crewReport@KerbinInSpaceLow
+			title = Crew Report while in space near Kerbin
+			dsc = 1
+			scv = 1
+			sbv = 1
+			sci = 0
+			cap = 5
+		}
+		Science
+		{
+			id = crewReport@KerbinInSpaceHigh
+			title = Crew Report while in space high over Kerbin
+			dsc = 1
+			scv = 0
+			sbv = 1.5
+			sci = 7.5
+			cap = 7.5
+		}
+		Science
+		{
+			id = evaReport@KerbinInSpaceHigh
+			title = EVA Report while in space high over Kerbin
+			dsc = 1
+			scv = 0
+			sbv = 1.5
+			sci = 12
+			cap = 12
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinInSpaceHigh
+			title = Mystery Goo™ Observation while in space high over Kerbin
+			dsc = 1
+			scv = 0.230769232
+			sbv = 1.5
+			sci = 15
+			cap = 19.5
+		}
+		Science
+		{
+			id = barometerScan@KerbinInSpaceHigh
+			title = Atmospheric Pressure Scan while in space high over Kerbin
+			dsc = 1
+			scv = 0
+			sbv = 1.5
+			sci = 18
+			cap = 18
+		}
+		Science
+		{
+			id = temperatureScan@KerbinInSpaceHigh
+			title = Temperature Scan while in space high over Kerbin
+			dsc = 1
+			scv = 0
+			sbv = 1.5
+			sci = 12
+			cap = 12
 		}
 	}
 	SCENARIO
@@ -1030,8 +1126,8 @@ GAME
 		LifeSupportMonitoring
 		{
 			visible = False
-			x = 810
-			y = 75
+			x = 117
+			y = 332
 			width = 300
 			height = 300
 		}
@@ -1055,203 +1151,11 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.2.2
-		UT = 183477.32648599168
-		activeVessel = 10
+		UT = 733366.46626908041
+		activeVessel = 0
 		mapViewFiltering = -1026
 		commNetUIModeTracking = Network
 		commNetUIModeFlight = Path
-		VESSEL
-		{
-			pid = 254f1e57af5440bc9a3fad01353e970f
-			name = Ast. HSJ-227
-			type = SpaceObject
-			sit = ORBITING
-			landed = False
-			landedAt = 
-			splashed = False
-			met = 0.02
-			lct = 0.02
-			lastUT = -1
-			root = 0
-			lat = -2.8344803474389533
-			lon = -178.91868308260399
-			alt = 14594729369.87351
-			hgt = -1
-			nrm = 0,1,0
-			rot = -0.298433661,0.402898014,-0.817398846,0.283672005
-			CoM = 0,0,0
-			stg = 0
-			prst = False
-			ref = 0
-			ctrl = False
-			ORBIT
-			{
-				SMA = 15240609666.873161
-				ECC = 0.10916060315900668
-				INC = 2.8722365505115346
-				LPE = 2.1172853381064511
-				LAN = 261.77333875133843
-				MNA = -0.055479598589858403
-				EPH = 2043585.7560839844
-				REF = 0
-			}
-			PART
-			{
-				name = PotatoRoid
-				cid = 0
-				uid = 559298752
-				mid = 559298752
-				launchID = 0
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1
-				mirror = 1,1,1
-				symMethod = Radial
-				istg = 0
-				resPri = 0
-				dstg = 0
-				sqor = 0
-				sepI = 0
-				sidx = 0
-				attm = 0
-				srfN = None, -1
-				mass = 150
-				shielded = False
-				temp = -1
-				tempExt = 0
-				tempExtUnexp = 0
-				expt = 0.100000001
-				state = 0
-				attached = True
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = 
-				rTrf = 
-				modCost = 0
-			}
-			ACTIONGROUPS
-			{
-			}
-			DISCOVERY
-			{
-				state = 1
-				lastObservedTime = 0.02
-				lifetime = 586354.71038818359
-				refTime = 1728000
-				size = 4
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-			}
-			VESSELMODULES
-			{
-				ModularFlightIntegrator
-				{
-				}
-				RPMVesselComputer
-				{
-				}
-			}
-		}
-		VESSEL
-		{
-			pid = 9ae6b01593584f159f6d48db24dcaa14
-			name = Ast. FQT-931
-			type = SpaceObject
-			sit = ORBITING
-			landed = False
-			landedAt = 
-			splashed = False
-			met = 94.559999999998325
-			lct = 94.559999999998325
-			lastUT = -1
-			root = 0
-			lat = 0.31573759120482053
-			lon = 178.50631158360173
-			alt = 13696643119.3218
-			hgt = -1
-			nrm = 0,1,0
-			rot = 0.635266542,0.337201595,-0.217676803,0.659809291
-			CoM = 0,0,0
-			stg = 0
-			prst = False
-			ref = 0
-			ctrl = False
-			ORBIT
-			{
-				SMA = 14156273054.787691
-				ECC = 0.044561476668511395
-				INC = 0.32484895290648413
-				LPE = 150.54414885872518
-				LAN = 102.18744357019216
-				MNA = 0.47045844404077714
-				EPH = 2612918.3759179688
-				REF = 0
-			}
-			PART
-			{
-				name = PotatoRoid
-				cid = 0
-				uid = 917709473
-				mid = 917709473
-				launchID = 0
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1
-				mirror = 1,1,1
-				symMethod = Radial
-				istg = 0
-				resPri = 0
-				dstg = 0
-				sqor = 0
-				sepI = 0
-				sidx = 0
-				attm = 0
-				srfN = None, -1
-				mass = 150
-				shielded = False
-				temp = -1
-				tempExt = 0
-				tempExtUnexp = 0
-				expt = 0.100000001
-				state = 0
-				attached = True
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = 
-				rTrf = 
-				modCost = 0
-			}
-			ACTIONGROUPS
-			{
-			}
-			DISCOVERY
-			{
-				state = 1
-				lastObservedTime = 94.559999999998325
-				lifetime = 311902.65197753906
-				refTime = 1728000
-				size = 0
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-			}
-			VESSELMODULES
-			{
-				ModularFlightIntegrator
-				{
-				}
-				RPMVesselComputer
-				{
-				}
-			}
-		}
 		VESSEL
 		{
 			pid = 4e2f6869de88432f934745592dc575b7
@@ -1638,1290 +1542,6 @@ GAME
 		}
 		VESSEL
 		{
-			pid = 3011a4773cb549138bfff80e536ebfac
-			name = Ast. FWD-250
-			type = SpaceObject
-			sit = ORBITING
-			landed = False
-			landedAt = 
-			splashed = False
-			met = 1284.4777050780403
-			lct = 1284.4777050780403
-			lastUT = -1
-			root = 0
-			lat = 1.0262378381930313
-			lon = 177.18954310781413
-			alt = 13757902246.518974
-			hgt = -1
-			nrm = 0,1,0
-			rot = -0.510968268,0.433308303,0.139212906,0.729229093
-			CoM = 0,0,0
-			stg = 0
-			prst = False
-			ref = 0
-			ctrl = False
-			ORBIT
-			{
-				SMA = 14609587055.297417
-				ECC = 0.072731317761628986
-				INC = 1.1155207508917786
-				LPE = 172.88486952057468
-				LAN = 65.178006356650599
-				MNA = 0.24934379943058982
-				EPH = 1910905.620283203
-				REF = 0
-			}
-			PART
-			{
-				name = PotatoRoid
-				cid = 0
-				uid = 1543236834
-				mid = 1543236834
-				launchID = 0
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1
-				mirror = 1,1,1
-				symMethod = Radial
-				istg = 0
-				resPri = 0
-				dstg = 0
-				sqor = 0
-				sepI = 0
-				sidx = 0
-				attm = 0
-				srfN = None, -1
-				mass = 150
-				shielded = False
-				temp = -1
-				tempExt = 0
-				tempExtUnexp = 0
-				expt = 0.100000001
-				state = 0
-				attached = True
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = 
-				rTrf = 
-				modCost = 0
-			}
-			ACTIONGROUPS
-			{
-			}
-			DISCOVERY
-			{
-				state = 1
-				lastObservedTime = 1284.4777050780403
-				lifetime = 486079.30755615234
-				refTime = 1728000
-				size = 4
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-			}
-			VESSELMODULES
-			{
-				ModularFlightIntegrator
-				{
-				}
-				RPMVesselComputer
-				{
-				}
-			}
-		}
-		VESSEL
-		{
-			pid = 7a4d1dc1cd0a4511a373917470decca4
-			name = Satellite Launcher 1 Debris
-			type = Debris
-			sit = LANDED
-			landed = True
-			landedAt = KSC_LaunchPad_Platform
-			splashed = False
-			met = 30.600000000667933
-			lct = 17286.032129514704
-			lastUT = 17316.632129515372
-			root = 0
-			lat = -0.097308681269189887
-			lon = -74.557577990963168
-			alt = 81.419900513254106
-			hgt = 8.95276642
-			nrm = -0.00113746524,0.999999404,-0.00016374886
-			rot = 0.685085952,0.351955146,-0.176202029,-0.612974405
-			CoM = 0,0,0
-			stg = 3
-			prst = False
-			ref = 0
-			ctrl = False
-			cPch = 0
-			cHdg = 0
-			cMod = -1
-			ORBIT
-			{
-				SMA = NaN
-				ECC = 1
-				INC = 0.097308681274953374
-				LPE = 90
-				LAN = 5.0589024017439215
-				MNA = 0
-				EPH = 47864.65422052292
-				REF = 1
-			}
-			PART
-			{
-				name = launchClamp1
-				cid = 4293727368
-				uid = 2396872444
-				mid = 1724371503
-				launchID = 4
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1.00000012
-				mirror = 1,1,1
-				symMethod = Radial
-				istg = 3
-				resPri = 0
-				dstg = 2
-				sqor = 3
-				sepI = 3
-				sidx = 1
-				attm = 1
-				srfN = srfAttach, -1
-				mass = 0.100000001
-				shielded = False
-				temp = 307.54404234844895
-				tempExt = 307.84562149066016
-				tempExtUnexp = 307.84414248312902
-				expt = 0.100000001
-				state = 1
-				attached = False
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/NASA
-				rTrf = launchClamp1
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = LaunchClamp
-					isEnabled = True
-					scaleFactor = 3.79250884
-					height = 9.56925774
-					stagingEnabled = True
-					towerRot = -1.37668614E-08,-0.382683337,-5.70241987E-09,-0.923879623
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ReleaseClamp
-						{
-							actionGroup = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleGenerator
-					isEnabled = True
-					generatorIsActive = True
-					throttle = 1
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ToggleAction
-						{
-							actionGroup = None
-							active = False
-						}
-						ActivateAction
-						{
-							actionGroup = None
-							active = False
-						}
-						ShutdownAction
-						{
-							actionGroup = None
-							active = False
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleTestSubject
-					isEnabled = True
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleModActions
-					isEnabled = True
-					partAutoStrutMode = Off
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						Action1
-						{
-							actionGroup = None
-							active = False
-						}
-						Action2
-						{
-							actionGroup = None
-							active = False
-						}
-						Action3
-						{
-							actionGroup = None
-							active = False
-						}
-						Action4
-						{
-							actionGroup = None
-							active = False
-						}
-						Action5
-						{
-							actionGroup = None
-							active = False
-						}
-						Action6
-						{
-							actionGroup = None
-							active = False
-						}
-						Action7
-						{
-							actionGroup = None
-							active = False
-						}
-						Action8
-						{
-							actionGroup = None
-							active = False
-						}
-						Action9
-						{
-							actionGroup = None
-							active = False
-						}
-						Action10
-						{
-							actionGroup = None
-							active = False
-						}
-						Action11
-						{
-							actionGroup = None
-							active = False
-						}
-						Action12
-						{
-							actionGroup = None
-							active = False
-						}
-						Action13
-						{
-							actionGroup = None
-							active = False
-						}
-						Action14
-						{
-							actionGroup = None
-							active = False
-						}
-						Action15
-						{
-							actionGroup = None
-							active = False
-						}
-						Action16
-						{
-							actionGroup = None
-							active = False
-						}
-						Action17
-						{
-							actionGroup = None
-							active = False
-						}
-						Action18
-						{
-							actionGroup = None
-							active = False
-						}
-						Action19
-						{
-							actionGroup = None
-							active = False
-						}
-						Action20
-						{
-							actionGroup = None
-							active = False
-						}
-						Action21
-						{
-							actionGroup = None
-							active = False
-						}
-						Action22
-						{
-							actionGroup = None
-							active = False
-						}
-						Action23
-						{
-							actionGroup = None
-							active = False
-						}
-						Action24
-						{
-							actionGroup = None
-							active = False
-						}
-						Action25
-						{
-							actionGroup = None
-							active = False
-						}
-						Action26
-						{
-							actionGroup = None
-							active = False
-						}
-						Action27
-						{
-							actionGroup = None
-							active = False
-						}
-						Action28
-						{
-							actionGroup = None
-							active = False
-						}
-						Action29
-						{
-							actionGroup = None
-							active = False
-						}
-						Action30
-						{
-							actionGroup = None
-							active = False
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleFuelCrossfeedActions2
-					isEnabled = True
-					setupRun = True
-					allowCrossfeed = False
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ToggleCrossfeed
-						{
-							actionGroup = None
-						}
-						EnableCrossfeed
-						{
-							actionGroup = None
-						}
-						DisableCrossfeed
-						{
-							actionGroup = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			ACTIONGROUPS
-			{
-				Stage = False, 0
-				Gear = False, 0
-				Light = False, 0
-				RCS = False, 0
-				SAS = True, 17278.3721295145
-				Brakes = False, 0
-				Abort = False, 0
-				Custom01 = False, 0
-				Custom02 = False, 0
-				Custom03 = False, 0
-				Custom04 = False, 0
-				Custom05 = False, 0
-				Custom06 = False, 0
-				Custom07 = False, 0
-				Custom08 = False, 0
-				Custom09 = False, 0
-				Custom10 = False, 0
-			}
-			DISCOVERY
-			{
-				state = -1
-				lastObservedTime = 0
-				lifetime = Infinity
-				refTime = Infinity
-				size = 2
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-				pitch = 0
-				yaw = 0
-				roll = 0
-				trimPitch = 0
-				trimYaw = 0
-				trimRoll = 0
-				mainThrottle = 0
-			}
-			VESSELMODULES
-			{
-				ModularFlightIntegrator
-				{
-				}
-				RPMVesselComputer
-				{
-				}
-			}
-		}
-		VESSEL
-		{
-			pid = c26fed54bd2242a280f76c7a6910e0e1
-			name = Satellite Launcher 1 Debris
-			type = Debris
-			sit = LANDED
-			landed = True
-			landedAt = KSC_LaunchPad_Platform
-			splashed = False
-			met = 30.600000000667933
-			lct = 17286.032129514704
-			lastUT = 17316.632129515372
-			root = 0
-			lat = -0.097077245388065933
-			lon = -74.557636997007805
-			alt = 81.420212901663035
-			hgt = 8.95355129
-			nrm = 0.000576496124,0.999999642,0.000763386488
-			rot = 0.19006224,0.706711173,-0.681493044,-0.00172731583
-			CoM = 0,0,0
-			stg = 3
-			prst = False
-			ref = 0
-			ctrl = False
-			cPch = 0
-			cHdg = 0
-			cMod = -1
-			ORBIT
-			{
-				SMA = 0
-				ECC = 1
-				INC = 0.097077245383509314
-				LPE = 90
-				LAN = 5.0588433956992844
-				MNA = 0
-				EPH = 47864.65422052292
-				REF = 1
-			}
-			PART
-			{
-				name = launchClamp1
-				cid = 4293727498
-				uid = 1391036479
-				mid = 1724371503
-				launchID = 4
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1.00000012
-				mirror = 1,1,1
-				symMethod = Radial
-				istg = 3
-				resPri = 0
-				dstg = 2
-				sqor = 3
-				sepI = 3
-				sidx = 1
-				attm = 1
-				srfN = srfAttach, -1
-				mass = 0.100000001
-				shielded = False
-				temp = 306.9558763265606
-				tempExt = 307.2665168289958
-				tempExtUnexp = 307.26506275343013
-				expt = 0.100000001
-				state = 1
-				attached = False
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/NASA
-				rTrf = launchClamp1
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = LaunchClamp
-					isEnabled = True
-					scaleFactor = 3.79250932
-					height = 9.56925774
-					stagingEnabled = True
-					towerRot = -1.94498995E-09,-0.991444886,-1.47736614E-08,-0.130526304
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ReleaseClamp
-						{
-							actionGroup = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleGenerator
-					isEnabled = True
-					generatorIsActive = True
-					throttle = 1
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ToggleAction
-						{
-							actionGroup = None
-							active = False
-						}
-						ActivateAction
-						{
-							actionGroup = None
-							active = False
-						}
-						ShutdownAction
-						{
-							actionGroup = None
-							active = False
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleTestSubject
-					isEnabled = True
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleModActions
-					isEnabled = True
-					partAutoStrutMode = Off
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						Action1
-						{
-							actionGroup = None
-							active = False
-						}
-						Action2
-						{
-							actionGroup = None
-							active = False
-						}
-						Action3
-						{
-							actionGroup = None
-							active = False
-						}
-						Action4
-						{
-							actionGroup = None
-							active = False
-						}
-						Action5
-						{
-							actionGroup = None
-							active = False
-						}
-						Action6
-						{
-							actionGroup = None
-							active = False
-						}
-						Action7
-						{
-							actionGroup = None
-							active = False
-						}
-						Action8
-						{
-							actionGroup = None
-							active = False
-						}
-						Action9
-						{
-							actionGroup = None
-							active = False
-						}
-						Action10
-						{
-							actionGroup = None
-							active = False
-						}
-						Action11
-						{
-							actionGroup = None
-							active = False
-						}
-						Action12
-						{
-							actionGroup = None
-							active = False
-						}
-						Action13
-						{
-							actionGroup = None
-							active = False
-						}
-						Action14
-						{
-							actionGroup = None
-							active = False
-						}
-						Action15
-						{
-							actionGroup = None
-							active = False
-						}
-						Action16
-						{
-							actionGroup = None
-							active = False
-						}
-						Action17
-						{
-							actionGroup = None
-							active = False
-						}
-						Action18
-						{
-							actionGroup = None
-							active = False
-						}
-						Action19
-						{
-							actionGroup = None
-							active = False
-						}
-						Action20
-						{
-							actionGroup = None
-							active = False
-						}
-						Action21
-						{
-							actionGroup = None
-							active = False
-						}
-						Action22
-						{
-							actionGroup = None
-							active = False
-						}
-						Action23
-						{
-							actionGroup = None
-							active = False
-						}
-						Action24
-						{
-							actionGroup = None
-							active = False
-						}
-						Action25
-						{
-							actionGroup = None
-							active = False
-						}
-						Action26
-						{
-							actionGroup = None
-							active = False
-						}
-						Action27
-						{
-							actionGroup = None
-							active = False
-						}
-						Action28
-						{
-							actionGroup = None
-							active = False
-						}
-						Action29
-						{
-							actionGroup = None
-							active = False
-						}
-						Action30
-						{
-							actionGroup = None
-							active = False
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleFuelCrossfeedActions2
-					isEnabled = True
-					setupRun = True
-					allowCrossfeed = False
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ToggleCrossfeed
-						{
-							actionGroup = None
-						}
-						EnableCrossfeed
-						{
-							actionGroup = None
-						}
-						DisableCrossfeed
-						{
-							actionGroup = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			ACTIONGROUPS
-			{
-				Stage = False, 0
-				Gear = False, 0
-				Light = False, 0
-				RCS = False, 0
-				SAS = True, 17278.3721295145
-				Brakes = False, 0
-				Abort = False, 0
-				Custom01 = False, 0
-				Custom02 = False, 0
-				Custom03 = False, 0
-				Custom04 = False, 0
-				Custom05 = False, 0
-				Custom06 = False, 0
-				Custom07 = False, 0
-				Custom08 = False, 0
-				Custom09 = False, 0
-				Custom10 = False, 0
-			}
-			DISCOVERY
-			{
-				state = -1
-				lastObservedTime = 0
-				lifetime = Infinity
-				refTime = Infinity
-				size = 2
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-				pitch = 0
-				yaw = 0
-				roll = 0
-				trimPitch = 0
-				trimYaw = 0
-				trimRoll = 0
-				mainThrottle = 0
-			}
-			VESSELMODULES
-			{
-				ModularFlightIntegrator
-				{
-				}
-				RPMVesselComputer
-				{
-				}
-			}
-		}
-		VESSEL
-		{
-			pid = d99bd19a933d476fb9ba009ee559b46f
-			name = Satellite Launcher 1 Debris
-			type = Debris
-			sit = LANDED
-			landed = True
-			landedAt = KSC_LaunchPad_Platform
-			splashed = False
-			met = 30.600000000667933
-			lct = 17286.032129514704
-			lastUT = 17316.632129515372
-			root = 0
-			lat = -0.097243930485128166
-			lon = -74.55780813916347
-			alt = 81.418622997472994
-			hgt = 8.95328808
-			nrm = 0.000687278807,0.999999225,-0.00106739998
-			rot = -0.494936943,0.355014384,-0.505389631,0.611214817
-			CoM = 0,0,0
-			stg = 3
-			prst = False
-			ref = 0
-			ctrl = False
-			cPch = 0
-			cHdg = 0
-			cMod = -1
-			ORBIT
-			{
-				SMA = NaN
-				ECC = 1
-				INC = 0.097243930488621455
-				LPE = 90.000000000000014
-				LAN = 5.0586722535436479
-				MNA = 0
-				EPH = 47864.65422052292
-				REF = 1
-			}
-			PART
-			{
-				name = launchClamp1
-				cid = 4293783656
-				uid = 3332918092
-				mid = 1724371503
-				launchID = 4
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1
-				mirror = 1,1,1
-				symMethod = Radial
-				istg = 3
-				resPri = 0
-				dstg = 2
-				sqor = 3
-				sepI = 3
-				sidx = 1
-				attm = 1
-				srfN = srfAttach, -1
-				mass = 0.100000001
-				shielded = False
-				temp = 307.30215530953257
-				tempExt = 307.57476195007365
-				tempExtUnexp = 307.57344155066937
-				expt = 0.100000001
-				state = 1
-				attached = False
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/NASA
-				rTrf = launchClamp1
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = LaunchClamp
-					isEnabled = True
-					scaleFactor = 3.79251075
-					height = 9.56925774
-					stagingEnabled = True
-					towerRot = 1.18218715E-08,-0.608761489,-9.07124065E-09,0.793353319
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ReleaseClamp
-						{
-							actionGroup = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleGenerator
-					isEnabled = True
-					generatorIsActive = True
-					throttle = 1
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ToggleAction
-						{
-							actionGroup = None
-							active = False
-						}
-						ActivateAction
-						{
-							actionGroup = None
-							active = False
-						}
-						ShutdownAction
-						{
-							actionGroup = None
-							active = False
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleTestSubject
-					isEnabled = True
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleModActions
-					isEnabled = True
-					partAutoStrutMode = Off
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						Action1
-						{
-							actionGroup = None
-							active = False
-						}
-						Action2
-						{
-							actionGroup = None
-							active = False
-						}
-						Action3
-						{
-							actionGroup = None
-							active = False
-						}
-						Action4
-						{
-							actionGroup = None
-							active = False
-						}
-						Action5
-						{
-							actionGroup = None
-							active = False
-						}
-						Action6
-						{
-							actionGroup = None
-							active = False
-						}
-						Action7
-						{
-							actionGroup = None
-							active = False
-						}
-						Action8
-						{
-							actionGroup = None
-							active = False
-						}
-						Action9
-						{
-							actionGroup = None
-							active = False
-						}
-						Action10
-						{
-							actionGroup = None
-							active = False
-						}
-						Action11
-						{
-							actionGroup = None
-							active = False
-						}
-						Action12
-						{
-							actionGroup = None
-							active = False
-						}
-						Action13
-						{
-							actionGroup = None
-							active = False
-						}
-						Action14
-						{
-							actionGroup = None
-							active = False
-						}
-						Action15
-						{
-							actionGroup = None
-							active = False
-						}
-						Action16
-						{
-							actionGroup = None
-							active = False
-						}
-						Action17
-						{
-							actionGroup = None
-							active = False
-						}
-						Action18
-						{
-							actionGroup = None
-							active = False
-						}
-						Action19
-						{
-							actionGroup = None
-							active = False
-						}
-						Action20
-						{
-							actionGroup = None
-							active = False
-						}
-						Action21
-						{
-							actionGroup = None
-							active = False
-						}
-						Action22
-						{
-							actionGroup = None
-							active = False
-						}
-						Action23
-						{
-							actionGroup = None
-							active = False
-						}
-						Action24
-						{
-							actionGroup = None
-							active = False
-						}
-						Action25
-						{
-							actionGroup = None
-							active = False
-						}
-						Action26
-						{
-							actionGroup = None
-							active = False
-						}
-						Action27
-						{
-							actionGroup = None
-							active = False
-						}
-						Action28
-						{
-							actionGroup = None
-							active = False
-						}
-						Action29
-						{
-							actionGroup = None
-							active = False
-						}
-						Action30
-						{
-							actionGroup = None
-							active = False
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleFuelCrossfeedActions2
-					isEnabled = True
-					setupRun = True
-					allowCrossfeed = False
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ToggleCrossfeed
-						{
-							actionGroup = None
-						}
-						EnableCrossfeed
-						{
-							actionGroup = None
-						}
-						DisableCrossfeed
-						{
-							actionGroup = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			ACTIONGROUPS
-			{
-				Stage = False, 0
-				Gear = False, 0
-				Light = False, 0
-				RCS = False, 0
-				SAS = True, 17278.3721295145
-				Brakes = False, 0
-				Abort = False, 0
-				Custom01 = False, 0
-				Custom02 = False, 0
-				Custom03 = False, 0
-				Custom04 = False, 0
-				Custom05 = False, 0
-				Custom06 = False, 0
-				Custom07 = False, 0
-				Custom08 = False, 0
-				Custom09 = False, 0
-				Custom10 = False, 0
-			}
-			DISCOVERY
-			{
-				state = -1
-				lastObservedTime = 0
-				lifetime = Infinity
-				refTime = Infinity
-				size = 2
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-				pitch = 0
-				yaw = 0
-				roll = 0
-				trimPitch = 0
-				trimYaw = 0
-				trimRoll = 0
-				mainThrottle = 0
-			}
-			VESSELMODULES
-			{
-				ModularFlightIntegrator
-				{
-				}
-				RPMVesselComputer
-				{
-				}
-			}
-		}
-		VESSEL
-		{
 			pid = 9eaea3d29ee94f2bad37c44744ee2ca5
 			name = Satellite Launcher 1 Probe
 			type = Probe
@@ -2944,18 +1564,18 @@ GAME
 			prst = False
 			ref = 0
 			ctrl = True
-			cPch = 0.3111305
-			cHdg = -1.650685
+			cPch = 
+			cHdg = 
 			cMod = 0
 			ORBIT
 			{
-				SMA = 30034.424711829186
-				ECC = 0.99774517547929487
-				INC = 29.198627920973991
-				LPE = 270.00107104191898
-				LAN = 240.47192410383536
-				MNA = -3.141592374630183
-				EPH = 183477.32648599168
+				SMA = NaN
+				ECC = 1
+				INC = 29.198627917799179
+				LPE = 270
+				LAN = 99.926297938479479
+				MNA = 0
+				EPH = 733304.84626902302
 				REF = 3
 			}
 			PART
@@ -9132,18 +7752,18 @@ GAME
 			prst = False
 			ref = 0
 			ctrl = True
-			cPch = 0.4120002
-			cHdg = -5.861298
+			cPch = 
+			cHdg = 
 			cMod = 0
 			ORBIT
 			{
-				SMA = NaN
-				ECC = 1
+				SMA = 102253.58252611861
+				ECC = 0.99999999999999989
 				INC = 0.26229131399277172
 				LPE = 270
-				LAN = 229.06189204473503
-				MNA = 0
-				EPH = 47864.65422052292
+				LAN = 204.50223447223976
+				MNA = 3.1415926207170166
+				EPH = 733304.84626902302
 				REF = 2
 			}
 			PART
@@ -15296,6 +13916,294 @@ GAME
 				}
 			}
 		}
+		VESSEL
+		{
+			pid = 995e2691d7294d1a9b89407a0f304214
+			name = Ast. EIV-221
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 421414.39941889979
+			lct = 421414.39941889979
+			lastUT = -1
+			root = 0
+			lat = 0.19741491697351832
+			lon = -156.79206518224507
+			alt = 13534066541.21253
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.478127301,-0.535380542,0.559374392,0.414562613
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 13711514745.596188
+				ECC = 0.019694025384913959
+				INC = 0.45031286316567082
+				LPE = 263.22490276584182
+				LAN = 40.387658065527432
+				MNA = 1.0282246393456469
+				EPH = 4717609.4433642123
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 1692837482
+				mid = 1692837482
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 421414.39941889979
+				lifetime = 787084.9365234375
+				refTime = 1728000
+				size = 1
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				ModularFlightIntegrator
+				{
+				}
+				RPMVesselComputer
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = fcbbf9b37e724e8fac3bc25145cbe794
+			name = Ast. RMQ-002
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 493214.39941889979
+			lct = 493214.39941889979
+			lastUT = -1
+			root = 0
+			lat = -0.29430278170811613
+			lon = 155.10271625262723
+			alt = 14851977570.61581
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.203157917,0.510637522,-0.746875525,0.374370217
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14442810451.054558
+				ECC = 0.063362929912502863
+				INC = 1.3731645317341705
+				LPE = 331.92842515486268
+				LAN = 13.741112968162383
+				MNA = 0.40127698646741716
+				EPH = 4904288.6425829623
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 1201995508
+				mid = 1201995508
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 493214.39941889979
+				lifetime = 674094.90509033203
+				refTime = 1728000
+				size = 3
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				ModularFlightIntegrator
+				{
+				}
+				RPMVesselComputer
+				{
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = 171a46b2de3f4dd5b6e8ec5a2b83bf82
+			name = Ast. OXI-132
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 607214.39941889979
+			lct = 607214.39941889979
+			lastUT = -1
+			root = 0
+			lat = 0.10188925868689053
+			lon = 65.835684371170359
+			alt = 13766076741.837605
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.179945692,-0.691357672,-0.635094523,0.293767184
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 13793215874.450274
+				ECC = 0.024938413730850435
+				INC = 0.42483585554986364
+				LPE = 239.87031772929711
+				LAN = 197.9712997034805
+				MNA = -0.94914628336306295
+				EPH = 5142813.6181688998
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 274921092
+				mid = 274921092
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 607214.39941889979
+				lifetime = 911729.2236328125
+				refTime = 1728000
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				ModularFlightIntegrator
+				{
+				}
+				RPMVesselComputer
+				{
+				}
+			}
+		}
 	}
 	LoaderInfo
 	{
@@ -15416,12 +14324,15 @@ GAME
 		Interstellar v1.12.11.0 = False
 		MK1CabinHatch = True
 		VesselView = False
-		ModActions v1.0.0.0 = True
+		ModActions v1.0.0.0 = False
 		InterstellarFuelSwitch v2.4.6.0 / v2.4.6 = True
 		ModularFlightIntegrator v1.0.0.0 / v1.2.4.0 = True
 		TacLifeSupport v0.13.0.0 / v0.13.0 = True
-		Interstellar v1.12.17.0 = True
-		Diazo = True
+		Interstellar v1.12.17.0 = False
+		Diazo = False
+		InfernalRobotics v2.0.9.0 = True
+		Interstellar v1.12.18.0 = True
+		MagicSmokeIndustries = True
 	}
 	ROSTER
 	{
@@ -15533,15 +14444,22 @@ GAME
 			gExperienced = 0
 			outDueToG = False
 			ToD = 0
-			idx = -1
+			idx = 0
 			extraXP = 0
 			CAREER_LOG
 			{
-				flight = 0
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Suborbit,Kerbin
+				0 = Orbit,Kerbin
+				0 = ExitVessel,Kerbin
+				0 = BoardVessel,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 0
+				flight = 1
 			}
 		}
 		KERBAL
@@ -15701,19 +14619,22 @@ GAME
 			gExperienced = 0
 			outDueToG = False
 			ToD = 203536.79667661487
-			idx = -1
+			idx = 0
 			extraXP = 0
 			CAREER_LOG
 			{
-				flight = 1
+				flight = 2
 				0 = Land,Kerbin
 				0 = Flight,Kerbin
 				0 = ExitVessel,Kerbin
 				0 = Recover
+				1 = Land,Kerbin
+				1 = Flight,Kerbin
+				1 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 1
+				flight = 2
 			}
 		}
 		KERBAL
